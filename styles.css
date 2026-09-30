@@ -7,6 +7,31 @@
 
 html {
     font-size: 62.5%;
+    font-family: roboto;
+}
+
+.container {
+    width: 90%;
+    height: 75%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.titulo {
+    font-size: 4.4rem;
+    font-weight: bold;
+}
+
+.subtitulo {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.texto {
+    font-size: 1.7rem;
+    font-weight: lighter;
 }
 
 /* HEADER */
@@ -14,36 +39,50 @@ html {
 header {
     width: 100%;
     height: 7.2rem;
-    font-size: 1.7rem;
     display: grid;
     place-items: center;
     background-color: #EAEAEA;
 }
 
 header .container {
-    width: 100%;
-    display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 5%;
-    padding-right: 5%;
 }
 
 header .container div {
     display: flex;
-    gap: 50px;
+    gap: 5rem;
 }
 
 .logo {
-    width: 84px;
-    height: 36px;
+    height: 3.6rem;
+    width: 8.4rem;
 }
 
 /* SEÇÃO SOBRE */
 
 #sectSobre {
     min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+#sectSobre div div {
+    width: 600px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#sectSobre div div div {
+    width: fit-content;
+    height: fit-content;
+}
+
+#sobreImg {
+    width: 47%;
+    height: 100%;
+    background-color: #EAEAEA;
 }
 
 /* SEÇÃO SERVIÇOS */
@@ -51,10 +90,48 @@ header .container div {
 #sectServicos {
     min-height: 100vh;
     background-color: #EAEAEA;
+    display: grid;
+    place-items: center;
 }
 
 /* SEÇÃO BENEFÍCIOS */
 
 #sectBeneficios {
     min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+#sectBeneficios .container {
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#cardContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.card {
+    width: 388px;
+    height: 277px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+}
+
+.cardContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px;
+    gap: 20px;
+}
+
+.cardIcon {
+    width: 32px;
+    height: 32px;
 }
