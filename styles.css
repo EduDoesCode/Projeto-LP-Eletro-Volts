@@ -10,6 +10,10 @@ html {
     font-family: roboto;
 }
 
+body {
+    background-color: #F8FAFC;
+}
+
 .container {
     width: 90%;
     height: 75%;
@@ -22,26 +26,35 @@ html {
 .titulo {
     font-size: 4.4rem;
     font-weight: bold;
+    color: #0F172A;
 }
 
 .subtitulo {
     font-size: 3rem;
     font-weight: bold;
+    color: #003566;
 }
 
 .texto {
     font-size: 1.7rem;
     font-weight: lighter;
+    color: #334155;
 }
 
 .logo {
     height: 4rem;
     width: 9rem;
+    border-radius: 5px;
 }
 
 .icon {
     width: 32px;
     height: 32px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* HEADER */
@@ -51,7 +64,8 @@ header {
     height: 7.2rem;
     display: grid;
     place-items: center;
-    background-color: #EAEAEA;
+    background-color: rgba(248, 250, 252, 0.85);
+    color: #0F172A;
 }
 
 header .container {
@@ -69,6 +83,7 @@ header .container div {
     min-height: 100vh;
     display: grid;
     place-items: center;
+    background-color: #FFFFFF;
 }
 
 #sectSobre div div {
@@ -87,14 +102,13 @@ header .container div {
 #sobreImg {
     width: 47%;
     height: 100%;
-    background-color: #EAEAEA;
+    border-radius: 10px;
 }
 
 /* SEÇÃO SERVIÇOS */
 
 #sectServicos {
     min-height: 100vh;
-    background-color: #EAEAEA;
     display: grid;
     place-items: center;
 }
@@ -114,7 +128,11 @@ header .container div {
 .photoCard {
     width: 380px;
     height: 400px;
-    background-color: grey;
+}
+
+.photoCard img {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .photoText {
@@ -125,7 +143,9 @@ header .container div {
     flex-direction: column;
     justify-content: center;
     gap: 20px;
-    background-color: white;
+    background-color: #e1ecf7;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 #sectServicos img {
@@ -139,13 +159,24 @@ header .container div {
     min-height: 100vh;
     display: grid;
     place-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://picsum.photos/1343/682');
 }
 
 #sectBeneficios .container {
     flex-direction: column;
     justify-content: space-evenly;
+}
+
+#sectBeneficios .titulo {
+    color: #fff6cc;
+}
+
+#sectBeneficios .subtitulo {
+    color: #e9ecef;
+}
+
+#sectBeneficios .texto {
+    color: #dee2e6;
 }
 
 #cardContainer {
@@ -157,8 +188,10 @@ header .container div {
 .card {
     width: 380px;
     height: 250px;
-    background-color: rgba(0, 0, 0, 0.5);
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
 }
 
 .cardContent {
@@ -179,6 +212,7 @@ footer {
     width: 100%;
     height: 50vh;
     font-size: 2rem;
+    background-color: #0a2239;
 }
 
 footer .container {
@@ -190,6 +224,7 @@ footer .container {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    color: #fffae5;
 }
 
 #footerInfos {
@@ -202,15 +237,23 @@ footer .container {
 
 #footerInfos div {
     font-weight: initial;
+    color: #fffae5;
 }
 
 #footerContato {
-    margin-top: 5px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
+    gap: 2px;
 }
 
 #footerContato div {
     display: flex;
     flex-direction: row;
+    gap: 5px;
+}
+
+#footerContato .icon {
+    width: 30px;
+    height: 30px;
 }
