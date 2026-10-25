@@ -57,6 +57,46 @@ a {
     color: inherit;
 }
 
+#WhatsAppButton {
+    background-color: green;
+    border-radius: 50%;
+
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+    margin-right: 67px;
+    margin-bottom: 76px;
+
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#WhatsAppButton a {
+    display: grid;
+    width: 62px;
+    height: 62px;
+    place-items: center;
+}
+
+#WhatsAppButton.whatsapp-escondido {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+}
+
+.logoTexto {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 2em;
+}
+
+.logoDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px
+}
+
 /* HEADER */
 
 header {
@@ -65,16 +105,51 @@ header {
     display: grid;
     place-items: center;
     background-color: rgba(248, 250, 252, 0.85);
+    backdrop-filter: blur(15px);
     color: #0F172A;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transition: transform 0.3s ease-in-out;
 }
 
 header .container {
     flex-direction: row;
 }
 
-header .container div {
+
+header .texto {
     display: flex;
     gap: 5rem;
+    height: 100%;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+header .texto:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in-out;
+
+}
+
+header a {
+    height: 100%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+header a:hover {
+    color: #a5a191;
+    transition: 0.1s ease-in-out;
+}
+
+header.header-escondido {
+    transform: translateY(-100%);
+    pointer-events: none;
 }
 
 /* SEÇÃO SOBRE */
@@ -84,6 +159,7 @@ header .container div {
     display: grid;
     place-items: center;
     background-color: #FFFFFF;
+    padding-top: 7.2rem;
 }
 
 #sectSobre div div {
@@ -128,6 +204,9 @@ header .container div {
 .photoCard {
     width: 380px;
     height: 400px;
+    border-radius: 10px;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .photoCard img {
@@ -151,6 +230,12 @@ header .container div {
 #sectServicos img {
     width: 100%;
     height: 50%;
+}
+
+.photoCard:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+
+    transform: translateY(-5px);
 }
 
 /* SEÇÃO BENEFÍCIOS */
@@ -192,6 +277,8 @@ header .container div {
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
     border-radius: 10px;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cardContent {
@@ -204,6 +291,13 @@ header .container div {
     gap: 20px;
 }
 
+.card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+
+    transform: translateY(-5px);
+}
+
+
 /* FOOTER */
 
 footer {
@@ -211,8 +305,7 @@ footer {
     place-items: center;
     width: 100%;
     height: 50vh;
-    font-size: 2rem;
-    background-color: #0a2239;
+    background: #0a2239;
 }
 
 footer .container {

@@ -13,18 +13,23 @@
     <header>
         <div class="container">
 
-            <img src="https://picsum.photos/84/36" class="logo">
+            <div class="logoDiv">
+                <img src="https://picsum.photos/84/36" class="logo">
+                <h1 class="logoTexto">Eletro Volt's Automações Industriais</h1>
+            </div>
 
             <div class="texto">
-                <a href="#sectSobre">Sobre</a>
-                <a href="#sectServicos">Serviços</a>
-                <a href="#sectBeneficios">Por que nós?</a>
+                <a href="#sectSobre" tabindex="-1">Sobre</a>
+                <a href="#sectServicos" tabindex="-1">Serviços</a>
+                <a href="#sectBeneficios" tabindex="-1">Por que nós?</a>
             </div>
 
         </div>
     </header>
 
-    <section id="sectSobre">
+    <div id="WhatsAppButton"><a href="#zap" tabindex="-1"><img src="Assets/whatsapp.svg" class="icon"></a></div>
+
+    <section id="sectSobre" tabindex="0">
         <div class="container">
 
             <img src="https://picsum.photos/568/511" id="sobreImg">
@@ -44,7 +49,7 @@
         </div>
     </section>
 
-    <section id="sectServicos">
+    <section id="sectServicos" tabindex="0">
 
         <div class="container">
 
@@ -85,7 +90,7 @@
 
     </section>
 
-    <section id="sectBeneficios">
+    <section id="sectBeneficios" tabindex="0">
 
         <div class="container">
 
@@ -133,25 +138,28 @@
         <div class="container">
 
             <div id="footerNav" class="texto">
-                <a href="#sectSobre">Sobre</a>
-                <a href="#sectServicos">Serviços</a>
-                <a href="#sectBeneficios">Por que nós?</a>
+                <a href="#sectSobre" tabindex="-1">Sobre</a>
+                <a href="#sectServicos" tabindex="-1">Serviços</a>
+                <a href="#sectBeneficios" tabindex="-1">Por que nós?</a>
 
-                <a href="#" id="footerContato">
+                <div id="footerContato">
                     <div>Entre em contato</div>
 
                     <div>
-                        <img src="Assets/instagram.svg" class="icon"> <br>
-                        <img src="Assets/whatsapp.svg" class="icon"> <br>
-                        <img src="Assets/gmail.svg" class="icon">
+                        <a href="#"><img src="Assets/instagram.svg" class="icon"></a> <br>
+                        <a href="#"><img src="Assets/whatsapp.svg" class="icon"></a> <br>
+                        <a href="#"><img src="Assets/gmail.svg" class="icon"></a>
                     </div>
-                </a>
+                </div>
 
             </div>
 
             <div id="footerInfos">
 
-                <img src="https://picsum.photos/84/36" class="logo">
+                <div class="logoDiv">
+                    <img src="https://picsum.photos/84/36" class="logo">
+                    <h1 class="logoTexto">Eletro Volt's Automações Industriais</h1>
+                </div>
 
                 <div class="texto">
                     <p>
@@ -175,6 +183,7 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
