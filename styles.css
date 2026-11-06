@@ -24,20 +24,27 @@ body {
 }
 
 .titulo {
+    font-family: 'Inter', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-size: 4.4rem;
     font-weight: bold;
     color: #0F172A;
 }
 
+#sectServicos .titulo,
+#sectBeneficios .titulo {
+    text-align: center;
+}
+
 .subtitulo {
+    font-family: 'Inter', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-size: 3rem;
     font-weight: bold;
     color: #003566;
 }
 
 .texto {
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
     font-size: 1.7rem;
-    font-weight: lighter;
     color: #334155;
 }
 
@@ -58,15 +65,13 @@ a {
 }
 
 #WhatsAppButton {
-    background-color: green;
+    background-color: #25D366;
     border-radius: 50%;
 
     position: fixed;
-    right: 0;
-    bottom: 0;
+    right: 7rem;
+    bottom: 8rem;
     z-index: 9;
-    margin-right: 67px;
-    margin-bottom: 76px;
 
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
@@ -85,9 +90,9 @@ a {
 }
 
 .logoTexto {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: normal;
-    font-size: 2em;
+    font-family: 'Montserrat', 'Trebuchet MS', 'Segoe UI', sans-serif;
+    font-weight: 100;
+    font-size: 1.7rem;
 }
 
 .logoDiv {
@@ -104,7 +109,7 @@ header {
     height: 7.2rem;
     display: grid;
     place-items: center;
-    background-color: rgba(248, 250, 252, 0.85);
+    background-color: rgba(233, 244, 255, 0.85);
     backdrop-filter: blur(15px);
     color: #0F172A;
 
@@ -117,6 +122,7 @@ header {
 
 header .container {
     flex-direction: row;
+    justify-content: space-between;
 }
 
 
@@ -129,12 +135,6 @@ header .texto {
     padding: 10px;
 }
 
-header .texto:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-    transition: 0.3s ease-in-out;
-
-}
-
 header a {
     height: 100%;
     padding: 5px;
@@ -143,8 +143,8 @@ header a {
 }
 
 header a:hover {
-    color: #a5a191;
-    transition: 0.1s ease-in-out;
+    color: #ffe992;
+    transition: 0.15s ease-in-out;
 }
 
 header.header-escondido {
@@ -170,11 +170,6 @@ header.header-escondido {
     gap: 20px;
 }
 
-#sectSobre div div div {
-    width: fit-content;
-    height: fit-content;
-}
-
 #sobreImg {
     width: 47%;
     height: 100%;
@@ -187,18 +182,24 @@ header.header-escondido {
     min-height: 100vh;
     display: grid;
     place-items: center;
+    height: auto;
+    padding: 8rem 0;
 }
 
 #sectServicos .container {
+    height: auto;
     flex-direction: column;
     justify-content: space-evenly;
+    gap: 3rem;
 }
 
 .photoCardContainer {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap
 }
 
 .photoCard {
@@ -222,7 +223,7 @@ header.header-escondido {
     flex-direction: column;
     justify-content: center;
     gap: 20px;
-    background-color: #e1ecf7;
+    background-color: #e3e9ef;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -242,14 +243,22 @@ header.header-escondido {
 
 #sectBeneficios {
     min-height: 100vh;
+    height: auto;
+    padding: 8rem 0;
     display: grid;
     place-items: center;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://picsum.photos/1343/682');
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #sectBeneficios .container {
     flex-direction: column;
     justify-content: space-evenly;
+    height: auto;
+    gap: 3rem;
 }
 
 #sectBeneficios .titulo {
@@ -266,8 +275,10 @@ header.header-escondido {
 
 #cardContainer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
+    gap: 3rem;
+    flex-wrap: wrap
 }
 
 .card {
@@ -304,28 +315,20 @@ footer {
     display: grid;
     place-items: center;
     width: 100%;
-    height: 50vh;
+    height: auto;
+    padding: 6rem 0;
     background: #0a2239;
 }
 
 footer .container {
     justify-content: space-between;
-}
-
-#footerNav {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    color: #fffae5;
+    height: auto;
 }
 
 #footerInfos {
-    width: 50%;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    gap: 4rem;
 }
 
 #footerInfos div {
@@ -334,19 +337,137 @@ footer .container {
 }
 
 #footerContato {
-    margin-top: 20px;
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    align-items: center;
+    gap: 8rem;
 }
 
-#footerContato div {
+footer .logoDiv {
+    flex-direction: row;
+    text-align: center;
+    gap: 10px;
+}
+
+footer h2 {
+    color: #fffae5 !important;
+}
+
+#footerLinks {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #fffae5;
+    gap: 5px;
+    align-self: flex-end;
+}
+
+#footerLinks div {
     display: flex;
     flex-direction: row;
-    gap: 5px;
+    gap: 3px;
+}
+
+#footerContato div a {
+    transition: 0.1s ease-in-out;
+}
+
+#footerContato div p {
+    font-size: 1.7rem;
+}
+
+#footerContato div a:hover {
+    transform: scale(1.2);
 }
 
 #footerContato .icon {
     width: 30px;
     height: 30px;
+}
+
+@media (max-width: 768px) {
+
+    #WhatsAppButton {
+        right: 3rem;
+        bottom: 3rem;
+    }
+
+    section .container {
+        flex-direction: column;
+        height: auto;
+        padding: 3rem 1rem;
+        gap: 2rem;
+    }
+
+    header {
+        height: auto;
+        padding: 1.5rem 0;
+    }
+
+    header .container {
+        flex-direction: column;
+    }
+
+    header a {
+        font-size: 1.4rem;
+    }
+
+    #sectSobre {
+        height: auto;
+        padding-top: 14rem;
+    }
+
+    #sectSobre div div,
+    #sobreImg,
+    #footerInfos,
+    .photoCard,
+    .card {
+        width: 100%;
+    }
+
+    #sobreImg {
+        height: auto;
+    }
+
+    .photoCardContainer,
+    #cardContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .photoCard,
+    .card {
+        max-width: 380px;
+    }
+
+    footer {
+        padding: 3rem 1rem;
+        text-align: center;
+    }
+
+    footer .container {
+        flex-direction: row-reverse;
+    }
+
+    #footerInfos {
+        text-align: left;
+        gap: 1.5rem
+    }
+
+    #footerContato h2,
+    #footerContato p {
+        font-size: 1.4rem;
+    }
+
+    footer .logoDiv {
+        flex-direction: column;
+    }
+
+    #footerLinks {
+        align-self: auto;
+    }
+
+    #footerContato {
+        gap: 4rem;
+    }
 }
